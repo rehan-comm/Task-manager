@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Task Manager - Cohort 3 Project</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOg1ApIQ0tliDATg3YVaiko6JkCXPSqFH-AjWrhmA4Q&s=10"
+                alt="Logo">
+            <h1>Task Manager</h1>
+        </div>
+        <div class="nav-right">
+            <i class="ri-sun-fill"></i>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <i class="ri-moon-fill"></i>
+        </div>
+    </nav>
+    <div id="input">
+        <div class="task-input">
+            <i class="ri-list-unordered"></i>
+            <input type="text" class="input-task" placeholder="Enter Your Task">
+        </div>
+        <select name="categori" id="categori">
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+            <option value="personal">Personal</option>
+            <option value="shopping">Shopping</option>
+        </select>
+        <button class="add-task"><i class="ri-add-large-line"></i> Add Task</button>
+    </div>
+    <div id="dashboard">
+        <div class="dashboard-left">
+            <div class="completed">
+                <div class="completed-left">
+                    <i class="ri-checkbox-circle-fill"></i>
+                </div>
+                <div class="completed-right">
+                    <h2 class="complete-count">0</h2>
+                    <p>Completed Task</p>
+                </div>
+            </div>
+            <div class="pending">
+                <div class="pending-left">
+                    <i class="ri-timer-fill"></i>
+                </div>
+                <div class="pending-right">
+                    <h2 class="p-count">0</h2>
+                    <p>Pending Task</p>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-right">
+            <button class="clearall">Clear All</button>
+        </div>
+    </div>
+    <div id="filteration">
+        <div class="search-task">
+            <i class="ri-search-line"></i>
+            <input type="text" class="search-task" placeholder="Search Task...">
+        </div>
+        <div class="filter-container">
+            <button class="filter">
+                <i class="ri-apps-fill"></i>
+                <span>All Categories</span>
+                <i class="ri-arrow-down-s-line"></i>
+            </button>
+
+            <div class="filter-dropdown">
+                <div class="filter-option">All Categories</div>
+                <div class="filter-option">Work</div>
+                <div class="filter-option">Personal</div>
+                <div class="filter-option">Shopping</div>
+                <div class="filter-option">Study</div>
+            </div>
+        </div>
+    </div>
+    <div id="tasks">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
